@@ -22,10 +22,9 @@ body {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   background: #F36204;
-  position:absolute;
-  bottom:0;
   width:100%;
   min-height: 170px;
+  position: absolute;
 }
 
 .img1 {
@@ -91,4 +90,12 @@ top: 20px;
   margin-left: 10%;
   background-color: #F36204;
   border-radius: 10px;
+}
+#map {
+  height: 500px;
+  margin-left: 10%;
+  margin-right: 10%;
+  border-radius: 20px;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
