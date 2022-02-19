@@ -74,3 +74,13 @@ top: 20px;
   color: #000000;
   margin: 10px;
 }
+.b1{
+  border :1px solid #000000;
+  padding: 10px;
+  font-size: 24px;
+  margin-top: 24px;
+  margin-left: 10%;
+  background-color: #F36204;
+  border-radius: 10px;
+
+}
