@@ -26,6 +26,9 @@ body {
   min-height: 170px;
   position: absolute;
 }
+.div3{
+  position: relative;
+}
 
 .img1 {
   position: absolute;
@@ -48,6 +51,14 @@ top: 20px;
 .span2{
   font-size: 40px;
   color:#FFFFFF;
+}
+.span3{
+  font-size: 65px;
+  color:#FFFFFF;
+  margin-left: 50px;
+  position:absolute;
+  top:11px;
+
 }
 
 .p0{
@@ -95,7 +106,7 @@ top: 20px;
   height: 500px;
   margin-left: 10%;
   margin-right: 10%;
-  border-radius: 20px;
+  border-radius: 10px;
   margin-top: 30px;
   margin-bottom: 30px;
 }
