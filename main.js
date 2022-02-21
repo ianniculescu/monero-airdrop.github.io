@@ -13,7 +13,7 @@ const countries = [{name: "Philippines", lat: 12.7503486, lon: 122.7312101},{nam
 function getRndInteger(min,max){
   return Math.floor(Math.random()*(max-min))+min;
 }
-
+L.marker([50.5, 30.5]).addTo(map);
 async function getData(api){
   const response = await  fetch(api);
   const data = await response.json();
