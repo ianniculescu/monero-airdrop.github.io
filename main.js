@@ -28,15 +28,31 @@ async function getData(api){
 */
 getData();
 async function getData() {
+
+const lats = [];
+const lons = [];
 const response = await fetch('wallets.csv');
 const data = await response.text();
-console.log(data);
+const table = data.split(/\n/);
 
+table.forEach(row => {
+const columns = row.split(",");
+const lat = columns[7];
+const lon = columns[8];
+lats.push(lat);
+lons.push(lon);
+});
+console.log(lats[10]);
+console.log(lons[10]);
 }
 
 
 
 
+
+console.log(data);
+
+}
 function main(){
 button.addEventListener('click', function(){
 let r = getRndInteger(0,219);
