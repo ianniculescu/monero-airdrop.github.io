@@ -45,14 +45,6 @@ lons.push(lon);
 console.log(lats[10]);
 console.log(lons[10]);
 }
-
-
-
-
-
-console.log(data);
-
-}
 function main(){
 button.addEventListener('click', function(){
 let r = getRndInteger(0,219);
