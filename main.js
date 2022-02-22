@@ -41,7 +41,7 @@ const lat = columns[7];
 const lon = columns[8];
 lats.push(lat);
 lons.push(lon);
-L.marker([lat,long]).addTo(map);
+L.marker([parseInt(lat),parseInt(lon)]).addTo(map);
 });
 
 console.log(lats[10]);
