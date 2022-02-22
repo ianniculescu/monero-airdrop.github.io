@@ -26,14 +26,12 @@ async function getData(api){
   map.setView([data.elements[0].lat, data.elements[0].lon], 7);
 }
 */
-
+getData();
 async function getData() {
-  console.log("123");
-const response = await fetch("wallet.csv");
+const response = await fetch('wallets.csv');
 const data = await response.text();
-console.log("123");
 console.log(data);
-console.log("123");
+
 }
 
 
@@ -48,4 +46,3 @@ span.innerHTML = countries[r].name;
   });
 }
 main();
-getData();
