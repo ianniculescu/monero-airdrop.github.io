@@ -28,9 +28,12 @@ async function getData(api){
 */
 
 async function getData() {
+  console.log("123");
 const response = await fetch("wallet.csv");
 const data = await response.text();
+console.log("123");
 console.log(data);
+console.log("123");
 }
 
 
