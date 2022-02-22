@@ -45,3 +45,4 @@ span.innerHTML = countries[r].name;
   });
 }
 main();
+getData();
