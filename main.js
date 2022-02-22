@@ -14,15 +14,27 @@ function getRndInteger(min,max){
   return Math.floor(Math.random()*(max-min))+min;
 }
 L.marker([50.5, 30.5]).addTo(map);
+
+/*
 async function getData(api){
   const response = await  fetch(api);
+  const
   const data = await response.json();
   let a = "const countries = [";
   console.log(data);
   console.log(data.elements[0].lat);
   map.setView([data.elements[0].lat, data.elements[0].lon], 7);
-
 }
+*/
+
+async function getData() {
+const response = await fetch("wallet.csv");
+const data = await response.text();
+console.log(data);
+}
+
+
+
 
 function main(){
 button.addEventListener('click', function(){
