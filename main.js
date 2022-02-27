@@ -1,6 +1,6 @@
 const button = document.getElementById("button");
 const span = document.getElementById("place");
-let map = L.map('map').setView([39.03961934308089, 125.7586628039601], 7);
+let map = L.map('map',{zoomControl: false}).setView([39.03961934308089, 125.7586628039601], 7);
 const attribution = 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors';
 const tileUrl= 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
 let tiles = L.tileLayer(tileUrl,{attribution});
@@ -14,6 +14,7 @@ function getRndInteger(min,max){
   return Math.floor(Math.random()*(max-min))+min;
 }
 L.marker([50.5, 30.5]).addTo(map);
+L.control.zoom({position: "bottomright"}).addTo(map);
 
 /*
 async function getData(api){
@@ -56,3 +57,20 @@ span.innerHTML = countries[r].name;
   });
 }
 main();
+
+/*(map = L.map("map-atm", {
+        zoomControl: !1,
+        scrollWheelZoom: !1
+    }).setView([lat, lng], z),
+    L.control.zoom({
+        position: "bottomright"
+    }).addTo(map),
+    map.attributionControl.setPrefix(!1),
+    L.marker([lat, lng], {
+        icon: setMarkerIcon(0, 0, !1)
+    }).addTo(map),
+    L.tileLayer("https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png", {
+        attribution: "\u00a9 Stadia Maps, \u00a9 OpenMapTiles, \u00a9 OpenStreetMap contributors",
+        maxZoom: 18
+    }).addTo(map))
+    */

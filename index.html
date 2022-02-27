@@ -8,6 +8,7 @@
 	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
 	integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
 	crossorigin=""/>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 	<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
 		integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
 		crossorigin=""></script>
@@ -31,12 +32,19 @@ Click to get Random Country
 <span id = "place" class="span3"></span>
 </div>
  <div id="map">
-
+	 <div id="locate_me">
+		 <i class="material-icons" >my_location</i>
+	 </div>
+	 <div id="search-container">
+		 <input id="search-box" placeholder="Search by city...">
+		 <i id="search-button" class="material-icons">search</i>
+		 <span id="separator"></span>
+		 <i id="delete" class="material-icons">highlight_off</i>
+	 </div>
  </div>
 
- <div id="locate_me" src="monero_icon.png" width="230" height="230">
 
- </div>
+
 
 </section>
 <footer>

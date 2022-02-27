@@ -112,8 +112,63 @@ top: 20px;
   position: relative;
 }
 #locate_me{
-
-
+  position: absolute;
   left: 10px;
-  bottom: 10px;
+  top: 10px;
+  height: 24px;
+  width: 24px;
+  z-index: 1001;
+  background: #FFFFFF;
+  text-align: center;
+  padding: 5px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px -2px grey;
+  cursor: pointer;
+}
+#locate_me:hover{
+  color: blue;
+}
+#search-container{
+  position: relative;
+  background-color: #FFFFFF;
+  top: 10px;
+  left:55px;
+  z-index: 1001;
+  width: 255px;
+  height: 34px;
+  box-shadow: 2px 2px 2px -2px grey;
+  border-radius: 5px;
+  margin: 0;
+  padding: 0;
+
+}
+#search-box{
+  width: 160px;
+  height: 32px;
+  border: none;
+  margin-left: 20px;
+  overflow: hidden;
+}
+#search-button{
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+#search-button:hover{
+  color:blue;
+}
+#separator{
+  position: absolute;
+  height: 20px;
+  margin-top:7px;
+  margin-left: 2px;
+  border-left: solid 2px lightgrey;
+}
+#delete{
+  vertical-align: middle;
+  margin-left: 14px;
+  cursor: pointer;
+}
+#delete:hover{
+  color:blue
 }
