@@ -1,5 +1,6 @@
 const button = document.getElementById("button");
 const span = document.getElementById("place");
+const search = document.getElementById("search-button");
 let map = L.map('map',{zoomControl: false}).setView([39.03961934308089, 125.7586628039601], 7);
 const attribution = 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors';
 const tileUrl= 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
@@ -48,12 +49,22 @@ L.marker([parseFloat(lat),parseFloat(lon)]).addTo(map);
 console.log(lats[10]);
 console.log(lons[10]);
 }
+
+function getLocation(){
+
+  
+}
 function main(){
 button.addEventListener('click', function(){
 let r = getRndInteger(0,219);
 map.setView([countries[r].lat, countries[r].lon], 7);
 console.log(countries[r].name);
 span.innerHTML = countries[r].name;
+  });
+
+  search.addEventListener('click',function(){
+    console.log("hello");
+    getLocation()
   });
 }
 main();
