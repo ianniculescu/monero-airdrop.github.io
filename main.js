@@ -1,6 +1,7 @@
 const button = document.getElementById("button");
 const span = document.getElementById("place");
 const search = document.getElementById("search-button");
+const locate_me = document.getElementById("locate_me");
 let map = L.map('map',{zoomControl: false}).setView([39.03961934308089, 125.7586628039601], 7);
 const attribution = 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors';
 const tileUrl= 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
@@ -51,9 +52,19 @@ console.log(lons[10]);
 }
 
 function getLocation(){
-
-  
+  if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(showPosition);
+    }
 }
+
+function showPosition(position) {
+  console.log("Latitude: " + position.coords.latitude +
+  "<br>Longitude: " + position.coords.longitude);
+  map.setView([position.coords.latitude,position.coords.longitude],16);
+  L.marker([position.coords.latitude,position.coords.longitude], {icon:marker}).addTo(map);
+
+}
+
 function main(){
 button.addEventListener('click', function(){
 let r = getRndInteger(0,219);
@@ -62,9 +73,10 @@ console.log(countries[r].name);
 span.innerHTML = countries[r].name;
   });
 
-  search.addEventListener('click',function(){
+  locate_me.addEventListener('click',function(){
     console.log("hello");
-    getLocation()
+    span.innerHTML = "";
+    getLocation();
   });
 }
 main();
