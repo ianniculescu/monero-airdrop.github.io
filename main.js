@@ -60,7 +60,7 @@ function showPosition(position) {
   console.log("Latitude: " + position.coords.latitude +
   "<br>Longitude: " + position.coords.longitude);
   map.setView([position.coords.latitude,position.coords.longitude],16);
-  L.marker([position.coords.latitude,position.coords.longitude], {icon:marker}).addTo(map);
+  //L.marker([position.coords.latitude,position.coords.longitude], {icon:marker}).addTo(map);
 
 }
 
