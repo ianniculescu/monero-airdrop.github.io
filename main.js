@@ -1,6 +1,7 @@
 const button = document.getElementById("button");
 const span = document.getElementById("place");
 const search = document.getElementById("search-button");
+const del = document.getElementById("delete");
 const locate_me = document.getElementById("locate_me");
 const input = document.getElementById("search-box");
 let map = L.map('map',{zoomControl: false}).setView([39.03961934308089, 125.7586628039601], 7);
@@ -30,7 +31,6 @@ async function getCity(api){
 
 getData();
 async function getData() {
-
 const lats = [];
 const lons = [];
 const response = await fetch('wallets.csv');
@@ -41,11 +41,12 @@ table.forEach(row => {
 const columns = row.split(",");
 const lat = columns[7];
 const lon = columns[8];
+console.log(lat);
+console.log(lon);
 lats.push(lat);
 lons.push(lon);
 L.marker([parseFloat(lat),parseFloat(lon)]).addTo(map);
 });
-
 console.log(lats[10]);
 console.log(lons[10]);
 }
@@ -74,13 +75,17 @@ span.innerHTML = countries[r].name;
 
   locate_me.addEventListener('click',function(){
     console.log("hello");
-    span.innerHTML = "";
     getLocation();
+    span.innerHTML = "";
   });
   search.addEventListener('click',function(){
     console.log(input.value);
-    getCity("\'https://lz4.overpass-api.de/api/interpreter?data=[out:json][timeout:25];(node[\"name\"=\""+input.value+"\"][\"place\"=\"city\"];);out skel;\'");
+    getCity('https://lz4.overpass-api.de/api/interpreter?data=[out:json][timeout:25];(node["name"="annecy"]["place"="city"];);out skel;');
   });
+  del.addEventListener('click',function(){
+    input.value = "";
+  });
+
 }
 main();
 
