@@ -2,6 +2,7 @@ const button = document.getElementById("button");
 const span = document.getElementById("place");
 const search = document.getElementById("search-button");
 const locate_me = document.getElementById("locate_me");
+const input = document.getElementById("search-box");
 let map = L.map('map',{zoomControl: false}).setView([39.03961934308089, 125.7586628039601], 7);
 const attribution = 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors';
 const tileUrl= 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
@@ -18,17 +19,15 @@ function getRndInteger(min,max){
 L.marker([50.5, 30.5]).addTo(map);
 L.control.zoom({position: "bottomright"}).addTo(map);
 
-/*
+
 async function getData(api){
   const response = await  fetch(api);
-  const
   const data = await response.json();
-  let a = "const countries = [";
   console.log(data);
   console.log(data.elements[0].lat);
   map.setView([data.elements[0].lat, data.elements[0].lon], 7);
 }
-*/
+
 getData();
 async function getData() {
 
@@ -77,6 +76,10 @@ span.innerHTML = countries[r].name;
     console.log("hello");
     span.innerHTML = "";
     getLocation();
+  });
+  search.addEventListener('click',function(){
+    console.log(input.value);
+    getData("\'https://lz4.overpass-api.de/api/interpreter?data=[out:json][timeout:25];(node[\"name\"=\""+input.value+"\"][\"place\"=\"city\"];);out skel;\'");
   });
 }
 main();
