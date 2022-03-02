@@ -20,7 +20,7 @@ L.marker([50.5, 30.5]).addTo(map);
 L.control.zoom({position: "bottomright"}).addTo(map);
 
 
-async function getData(api){
+async function getCity(api){
   const response = await  fetch(api);
   const data = await response.json();
   console.log(data);
@@ -79,7 +79,7 @@ span.innerHTML = countries[r].name;
   });
   search.addEventListener('click',function(){
     console.log(input.value);
-    getData("\'https://lz4.overpass-api.de/api/interpreter?data=[out:json][timeout:25];(node[\"name\"=\""+input.value+"\"][\"place\"=\"city\"];);out skel;\'");
+    getCity("\'https://lz4.overpass-api.de/api/interpreter?data=[out:json][timeout:25];(node[\"name\"=\""+input.value+"\"][\"place\"=\"city\"];);out skel;\'");
   });
 }
 main();
