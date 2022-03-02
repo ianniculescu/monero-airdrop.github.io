@@ -25,8 +25,8 @@ async function getCity(api){
   const response = await  fetch(api);
   const data = await response.json();
   console.log(data);
-  console.log(data.elements[0].lat);
-  map.setView([data.elements[0].lat, data.elements[0].lon], 7);
+  console.log(data.elements[0]);
+//  map.setView([data.elements[0].lat, data.elements[0].lon], 7);
 }
 
 getData();
@@ -36,7 +36,7 @@ const lons = [];
 const response = await fetch('wallets.csv');
 const data = await response.text();
 const table = data.split(/\n/);
-
+console.log("hello");
 table.forEach(row => {
 const columns = row.split(",");
 const lat = columns[7];
