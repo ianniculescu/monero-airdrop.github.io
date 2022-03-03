@@ -35,19 +35,18 @@ const lats = [];
 const lons = [];
 const response = await fetch('wallets.csv');
 const data = await response.text();
-const table = data.split(/\n/);
-console.log("hello");
-console.log(table);
+const table = data.split(/\n/).slice(1);
 table.forEach(row => {
 const columns = row.split(",");
 const lat = columns[7];
 const lon = columns[8];
+if(){
+  lats.push(lat);
+  lons.push(lon);
+  L.marker([parseFloat(lat),parseFloat(lon)]).addTo(map);
+}
 
-console.log(colums);
 
-lats.push(lat);
-lons.push(lon);
-L.marker([parseFloat(lat),parseFloat(lon)]).addTo(map);
 });
 console.log(lats[10]);
 console.log(lons[10]);
