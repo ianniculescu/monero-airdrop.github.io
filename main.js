@@ -37,7 +37,8 @@ const response = await fetch('wallets.csv');
 const data = await response.text();
 const table = data.split(/\n/);
 console.log("bruh");
-for(let i=0;i<table.length;i++){
+console.log(table.length);
+for(let i=0;i<table.length-1;i++){
 const columns = table[i].split(",");
 const lat = columns[7];
 const lon = columns[8];
@@ -78,7 +79,7 @@ span.innerHTML = countries[r].name;
   });
   search.addEventListener('click',function(){
     console.log(input.value);
-    getCity('https://z.overpass-api.de/api/interpreter?data=[out:json][timeout:25];(node[%22name%22=%22Annecy%22][%22place%22=%22city%22];);out%20skel%20noids;');
+    getCity('https://z.overpass-api.de/api/interpreter?data=[out:json][timeout:25];(node[%22name%22=%22'+input.value+'%22][%22place%22=%22city%22];);out%20skel%20noids;');
   });
   del.addEventListener('click',function(){
     input.value = "";
