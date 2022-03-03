@@ -40,13 +40,9 @@ table.forEach(row => {
 const columns = row.split(",");
 const lat = columns[7];
 const lon = columns[8];
-if(){
   lats.push(lat);
   lons.push(lon);
   L.marker([parseFloat(lat),parseFloat(lon)]).addTo(map);
-}
-
-
 });
 console.log(lats[10]);
 console.log(lons[10]);
@@ -81,7 +77,7 @@ span.innerHTML = countries[r].name;
   });
   search.addEventListener('click',function(){
     console.log(input.value);
-    getCity('https://lz4.overpass-api.de/api/interpreter?data=[out:json][timeout:25];(node["name"="Annecy"]["place"="city"];);out skel;');
+    getCity('https://z.overpass-api.de/api/interpreter?data=[out:json][timeout:25];(node[%22name%22=%22Annecy%22][%22place%22=%22city%22];);out;%3E;out%20skel%20qt;');
   });
   del.addEventListener('click',function(){
     input.value = "";
