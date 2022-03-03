@@ -172,3 +172,20 @@ top: 20px;
 #delete:hover{
   color:blue
 }
+#fullscreen{
+  height: 24px;
+  width: 24px;
+  background: #FFFFFF;
+  z-index: 1001;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  padding: 5px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px -2px grey;
+  cursor: pointer;
+}
+#fullscreen:hover{
+  color:blue;
+  cursor: pointer;
+}
