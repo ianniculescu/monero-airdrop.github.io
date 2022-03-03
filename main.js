@@ -44,8 +44,6 @@ const lon = columns[8];
   lons.push(lon);
   L.marker([parseFloat(lat),parseFloat(lon)]).addTo(map);
 });
-console.log(lats[10]);
-console.log(lons[10]);
 }
 
 function getLocation(){
