@@ -27,7 +27,7 @@ body {
   position: absolute;
 }
 .div3{
-  position: relative;
+position: relative;
 }
 
 .img1 {
@@ -53,11 +53,11 @@ top: 20px;
   color:#FFFFFF;
 }
 .span3{
-  font-size: 65px;
+  font-size: 45px;
   color:#FFFFFF;
-  margin-left: 50px;
-  position:absolute;
-  top:11px;
+
+  margin-right: 5%;
+  position:relative;
 
 }
 
@@ -70,8 +70,8 @@ top: 20px;
   text-align: left;
   font-size: 30px;
   color:#FFFFFF;
-  margin-left: 10%;
-  margin-right: 10%;
+  margin-left: 5%;
+  margin-right: 5%;
   margin-top: 30px;
 }
 .p2{
@@ -96,16 +96,15 @@ top: 20px;
 .b1{
   border :1px solid #000000;
   padding: 10px;
+  margin-right: 20px;
   font-size: 24px;
-  margin-top: 24px;
-  margin-left: 10%;
   background-color: #F36204;
   border-radius: 10px;
 }
 #map {
   height: 500px;
-  margin-left: 10%;
-  margin-right: 10%;
+  margin-left: 5%;
+  margin-right: 5%;
   border-radius: 10px;
   margin-top: 30px;
   margin-bottom: 30px;
@@ -189,3 +188,20 @@ top: 20px;
   color:blue;
   cursor: pointer;
 }
+table, tr, td {
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 30px;
+  width: 90%;
+  table-layout: fixed;
+
+
+}
+td:nth-child(1) {
+  vertical-align: top;
+  width: 350px;
+
+  }
+  td:nth-child(2) {
+
+  }
