@@ -58,7 +58,6 @@ top: 20px;
 
   margin-right: 5%;
   position:relative;
-
 }
 
 .p0{
@@ -100,6 +99,44 @@ top: 20px;
   font-size: 24px;
   background-color: #F36204;
   border-radius: 10px;
+}
+.article{
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 20px;
+  color:#FFFFFF;
+  font-size: 24px;
+}
+.title {
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 20px;
+  color: #F36204;
+  font-weight: bold;
+  font-size: 40px;
+}
+a{
+  color: #A8B9EF;
+  text-decoration: none;
+
+}
+a:hover,
+a:focus,
+a:active {
+  color: #552a64;
+}
+.paper{
+  height: 230px;
+  margin-bottom: 20px;
+
+}
+.card1{
+  float: left;
+  margin-left: 300px;
+}
+.card2{
+  float: right;
+  margin-right: 300px;
 }
 #map {
   height: 500px;
@@ -205,3 +242,7 @@ td:nth-child(1) {
   td:nth-child(2) {
 
   }
+
+footer{
+  margin-top: 100px;
+}
