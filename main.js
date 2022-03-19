@@ -36,7 +36,7 @@ function getRndInteger(min,max){
 }
 getData();
 async function getData() {
-const response = await fetch('wallets.csv');
+const response = await fetch('donations.csv');
 const data = await response.text();
 const table = data.split(/\n/).slice(1);
 for(let i=0;i<table.length-1;i++){
