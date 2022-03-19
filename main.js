@@ -53,10 +53,8 @@ if(myMap.has(latlng)&&columns[12]==="1"){
 const mark = {number:1,funds_donated:columns[1],funds_available:columns[2],funds_recycled:columns[3],biggest_donator:columns[4],biggest_distributor:columns[5],general_area:columns[8]};
 myMap.set(latlng,mark);
 }
+console.log(myMap);
 };
-for(const item of myMap[Symbol.iterator]()){
-  console.log(item);
-}
 }
 
 function getLocation(){
