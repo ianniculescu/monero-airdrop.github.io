@@ -30,7 +30,7 @@ const wallet = {
   'donated' :true
 }
 
-const markr = (area_precision,number,value,distributors,funds_delievered,funds_available,funds_received) => {
+const markr = (area_precision,number,value,distributors,funds_donated ,funds_available,funds_recycled) => {
   return {
 
   }
@@ -43,19 +43,20 @@ function getRndInteger(min,max){
 }
 getData();
 async function getData() {
-const lats = [];
-const lons = [];
 const response = await fetch('wallets.csv');
 const data = await response.text();
 const table = data.split(/\n/).slice(1);
 for(let i=0;i<table.length-1;i++){
 const columns = table[i].split(",");
-const lat = columns[8];
-const lon = columns[9];
-lats.push(lat);
-lons.push(lon);
+const latlng = {lat :columns[8],lon:columns[9]};
+myMap.set(latlng,);
 
-L.marker([parseFloat(lat),parseFloat(lon)]).addTo(map);
+if(myMap.has(latlng)&&columns[12]==="1"){
+  myMap.get(latlng).number +=1;
+  myMap.get(latlng).funds_donated += columns[1];
+  myMap.get(latlng).funds_donated += columns[1];
+
+}
 };
 }
 function getLocation(){
