@@ -1,4 +1,4 @@
-ID,funds_donated,funds_available ,funds_recycled,Provider of the funds,Distributer of the funds,PrimaryAddress,Private View Key,General area,Latitude,Longitude,Timestamp,donated
+ID,funds_donated,funds_available ,funds_recycled,donator,distributor,PrimaryAddress,Private View Key,General area,Latitude,Longitude,Timestamp,donated
 0,"0,0069420","0,0069420","0,0069420",Ian,Doug&Sunita,44gtDkCkwZPZZoGVmLGXFU5E7yBAJU9eP72dJADZ2e1iALnb8xGKVgcbVHqxnJzSmK12mEB7om3ntZLMDqdGTJd8DcYwL96,a974f992eff4366679ef0abe1b409569d365719aea6d7fcad998400d80d02a06,State,18.220833,-66.590149,52:01.4,1
 1,"0,0069420","0,0069420","0,0069420",Ian,Doug&Sunita,4AmCZrn1v3ojKW9v4Cz4GsgFXZvtjuhBxFDAPpSVu6AJeDsSGf8F9j8XgvkdV4khz4auzNNi1xfHfF54XyLbbzG5Tc4iwJ4,5d525c4088412dc5a5f8555a8bbfbba691f02dd0646ae11cb3011bdbd8d3b60c,State,18.220833,-66.590149,52:01.4,1
 2,"0,0069420","0,0069420","0,0069420",Ian,Doug&Sunita,44Hmb8WkbPZ3aGRaNWoxgBAuNN9eimjbg9oMnjCCAwC7iaynSZWaWD5gAL9Xa62sMkRRviREMPj2pDSiT8FDvVcsH4dGT1C,ba944b53cd98fe5ac3a7207f85cdeabf8aadaeb238980e3b3b63e965ccef690f,State,18.220833,-66.590149,52:01.4,1

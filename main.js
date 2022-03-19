@@ -28,14 +28,7 @@ const wallet = {
   'lon':'-66.590149',
   'Timestamp':'52:01.4',
   'donated' :true
-}
-
-const markr = (area_precision,number,value,distributors,funds_donated ,funds_available,funds_recycled) => {
-  return {
-
-  }
-}
-
+};
 
 
 function getRndInteger(min,max){
@@ -48,17 +41,24 @@ const data = await response.text();
 const table = data.split(/\n/).slice(1);
 for(let i=0;i<table.length-1;i++){
 const columns = table[i].split(",");
-const latlng = {lat :columns[8],lon:columns[9]};
-myMap.set(latlng,);
+const latlng = {lat :columns[9],lon:columns[10]};
 
 if(myMap.has(latlng)&&columns[12]==="1"){
   myMap.get(latlng).number +=1;
   myMap.get(latlng).funds_donated += columns[1];
-  myMap.get(latlng).funds_donated += columns[1];
+  myMap.get(latlng).funds_available += columns[2];
+  myMap.get(latlng).funds_recycled += columns[3];
 
+}else if(columns[12]==="1"){
+const mark = {number:1,funds_donated:columns[1],funds_available:columns[2],funds_recycled:columns[3],biggest_donator:columns[4],biggest_distributor:columns[5],general_area:columns[8]};
+myMap.set(latlng,mark);
 }
 };
+for(const item of myMap[Symbol.iterator]()){
+  console.log(item);
 }
+}
+
 function getLocation(){
   if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(showPosition);
