@@ -55,7 +55,7 @@ myMap.set(latlng,mark);
 console.log(myMap);
 
 };
-
+}
 function checkduplicate(iterable,latlng){
 for(const value of iterable){
 if(value.lat === latlng.lat&&value.lon === latlng.lon){
