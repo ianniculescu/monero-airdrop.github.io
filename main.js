@@ -54,12 +54,13 @@ myMap.set(latlng,mark);
 }
 console.log(myMap);
 
-myMap.forEach(logMapElements);
 };
+
+myMap.forEach(logMapElements);
 }
 
 function logMapElements(value,key){
- L.marker([key.lat,key.lon]).addTo(map).bindPopup("nice popup hello").openPopup();
+ L.marker([key.lat,key.lon]).addTo(map).bindPopup("biggest distributor = "+value.biggest_distributor).openPopup();
 }
 
 function getLocation(){
