@@ -39,11 +39,9 @@ async function getData() {
 const response = await fetch('donations.csv');
 const data = await response.text();
 const table = data.split(/\n/).slice(1);
-console.log(table);
 for(let i=0;i<table.length-1;i++){
 const columns = table[i].split(",");
 const latlng = {lat :columns[9],lon:columns[10]};
-console.log (columns);
 if(myMap.has(latlng)&&columns[12]==="1"){
   myMap.get(latlng).number +=1;
   myMap.get(latlng).funds_donated += columns[1];
@@ -55,7 +53,13 @@ const mark = {number:1,funds_donated:columns[1],funds_available:columns[2],funds
 myMap.set(latlng,mark);
 }
 console.log(myMap);
+
+myMap.forEach(logMapElements);
 };
+}
+
+function logMapElements(value,key){
+ L.marker([key.lat,key.lon]).addTo(map).bindPopup("nice popup hello").openPopup();
 }
 
 function getLocation(){
