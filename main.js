@@ -42,6 +42,9 @@ const table = data.split(/\n/).slice(1);
 for(let i=0;i<table.length-1;i++){
 const columns = table[i].split(",");
 const latlng = {lat :columns[9],lon:columns[10]};
+console.log(latlng);
+console.log(columns[12]);
+
 
 if(myMap.has(latlng)&&columns[12]==="1"){
   myMap.get(latlng).number +=1;
