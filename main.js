@@ -42,7 +42,7 @@ const table = data.split(/\n/).slice(1);
 for(let i=0;i<table.length-1;i++){
 const columns = table[i].split(",");
 const latlng = {lat :columns[9],lon:columns[10]};
-if(myMap.has(latlng)&&columns[12]==="1"){
+if(checkduplicate(myMap.keys(),latlng)&&columns[12]==="1"){
   myMap.get(latlng).number +=1;
   myMap.get(latlng).funds_donated += columns[1];
   myMap.get(latlng).funds_available += columns[2];
@@ -56,7 +56,13 @@ console.log(myMap);
 
 };
 
-myMap.forEach(logMapElements);
+function checkduplicate(iterable,latlng){
+for(const value of iterable){
+if(value.lat === latlng.lat&&value.lon === latlng.lon){
+  return true;
+}
+}
+return false;
 }
 
 function logMapElements(value,key){
