@@ -44,8 +44,8 @@ const columns = table[i].split(",");
 const latlng = {lat :columns[9],lon:columns[10]};
 const dup = false;
 if(columns[12]==="1"){
-for(const i = 0;i<arr.length;i++){
-  if(arr[i].lat === latlng.lat&&arr[i].lon === latlng.lon){
+for(const i = 0;i<mk.length;i++){
+  if(mk[i].lat === latlng.lat&&arr[i].lon === latlng.lon){
     mk[i].number +=1;
   mk[i].funds_donated += columns[1];
   mk[i].funds_available += columns[2];
