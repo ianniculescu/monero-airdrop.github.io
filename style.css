@@ -225,7 +225,7 @@ a:active {
   color:blue;
   cursor: pointer;
 }
-table, tr, td {
+.table{
   margin-left: 5%;
   margin-right: 5%;
   margin-top: 30px;

@@ -42,25 +42,30 @@ const table = data.split(/\n/).slice(1);
 for(let i=0;i<table.length-1;i++){
 const columns = table[i].split(",");
 const latlng = {lat :columns[9],lon:columns[10]};
-const dup = false;
-if(columns[12]==="1"){
-for(const i = 0;i<mk.length;i++){
-  if(mk[i].lat === latlng.lat&&arr[i].lon === latlng.lon){
-    mk[i].number +=1;
-  mk[i].funds_donated += columns[1];
-  mk[i].funds_available += columns[2];
-  mk[i].funds_recycled += columns[3];
+let dup = false; 
+if(columns[12] === '1\r'){
+  console.log("yes");
+for(let j = 0;j<mk.length;j++){
+  if(mk[j].lat === latlng.lat&&mk[j].lon === latlng.lon){
+    mk[j].number +=1;
+  mk[j].funds_donated += Number(columns[1]);
+  mk[j].funds_available += Number(columns[2]);
+  mk[j].funds_recycled += Number(columns[3]);
   dup = true;
   break;
   }
 }
 if(!dup){
-  const mark = {number:1,funds_donated:columns[1],funds_available:columns[2],funds_recycled:columns[3],biggest_donator:columns[4],biggest_distributor:columns[5],general_area:columns[8],lat:columns[9],lon:columns[10]};
+  const mark = {number:1,funds_donated:Number(columns[1]),funds_available:Number(columns[2]),funds_recycled:Number(columns[3]),biggest_donator:columns[4],biggest_distributor:columns[5],general_area:columns[8],lat:columns[9],lon:columns[10]};
   mk.push(mark);
 }
 }
 }
 console.log(mk);
+
+for(let k = 0;k<mk.length;k++){
+  L.marker([mk[k].lat,mk[k].lon]).addTo(map).bindPopup("General Area: "+mk[k].general_area+"<br>Biggest donator: "+mk[k].biggest_donator+"<br>Biggest distributor: "+mk[k].biggest_distributor+"<br>Funds available: "+mk[k].funds_available.toFixed(6)+"<br>Funds Donated: "+mk[k].funds_donated.toFixed(6)+"<br>Funds recycled: "+mk[k].funds_recycled.toFixed(6)).openPopup();
+}
 }
 
 function checkduplicate(arr,latlng){
