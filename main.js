@@ -64,7 +64,7 @@ if(!dup){
 console.log(mk);
 
 for(let k = 0;k<mk.length;k++){
-  L.marker([mk[k].lat,mk[k].lon]).addTo(map).bindPopup("General Area: "+mk[k].general_area+"<br>Biggest donator: "+mk[k].biggest_donator+"<br>Biggest distributor: "+mk[k].biggest_distributor+"<br>Funds available: "+mk[k].funds_available.toFixed(6)+"<br>Funds Donated: "+mk[k].funds_donated.toFixed(6)+"<br>Funds recycled: "+mk[k].funds_recycled.toFixed(6)).openPopup();
+  L.marker([mk[k].lat,mk[k].lon]).addTo(map).bindPopup("General Area: "+mk[k].general_area+"<br>Biggest donator: "+mk[k].biggest_donator+"<br>Biggest distributor: "+mk[k].biggest_distributor+"<br>Number of wallets distributed: "+mk[k].number+"<br>Funds available: "+mk[k].funds_available.toFixed(6)+"<br>Funds Donated: "+mk[k].funds_donated.toFixed(6)+"<br>Funds recycled: "+mk[k].funds_recycled.toFixed(6)).openPopup();
 }
 }
 

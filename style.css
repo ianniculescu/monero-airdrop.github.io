@@ -131,12 +131,11 @@ a:active {
 
 }
 .card1{
-  float: left;
-  margin-left: 300px;
+  
 }
 .card2{
-  float: right;
-  margin-right: 300px;
+  
+  
 }
 #map {
   height: 500px;
@@ -225,7 +224,7 @@ a:active {
   color:blue;
   cursor: pointer;
 }
-.table{
+.table1{
   margin-left: 5%;
   margin-right: 5%;
   margin-top: 30px;
@@ -234,14 +233,20 @@ a:active {
 
 
 }
-td:nth-child(1) {
+.tdb1{
   vertical-align: top;
   width: 350px;
 
   }
-  td:nth-child(2) {
-
-  }
+ .table2{
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 30px;
+  width: 90%;
+  table-layout: fixed;
+  text-align: center;
+ }
+ 
 
 footer{
   margin-top: 100px;
