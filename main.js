@@ -34,6 +34,7 @@ const wallet = {
 function getRndInteger(min,max){
   return Math.floor(Math.random()*(max-min))+min;
 }
+
 getData();
 async function getData() {
 const response = await fetch('donations.csv');
@@ -86,7 +87,9 @@ function getLocation(){
       navigator.geolocation.getCurrentPosition(showPosition);
     }
 }
-
+function helloEvent(e){
+  console.log(e);
+}
 function showPosition(position) {
   map.setView([position.coords.latitude,position.coords.longitude],16);
 }
